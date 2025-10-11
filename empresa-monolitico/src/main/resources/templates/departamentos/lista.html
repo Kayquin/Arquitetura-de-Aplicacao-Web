@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Departamentos</title></head>
+<body>
+<h1>Departamentos</h1>
+<a href="/departamentos/novo">Novo Departamento</a>
+<table border="1">
+<tr><th>ID</th><th>Nome</th><th>Localização</th><th>Ações</th></tr>
+<tr th:each="d : ${departamentos}">
+    <td th:text="${d.id}"></td>
+    <td th:text="${d.nome}"></td>
+    <td th:text="${d.localizacao}"></td>
+    <td>
+        <a th:href="@{'/departamentos/editar/' + ${d.id}}">Editar</a> |
+        <a th:href="@{'/departamentos/excluir/' + ${d.id}}">Excluir</a>
+    </td>
+</tr>
+</table>
+</body>
+</html>
