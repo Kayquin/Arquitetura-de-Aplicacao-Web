@@ -171,8 +171,8 @@ Min: 120 ms | Max: 260 ms | Média: 180 ms | Desvio padrão: 30 ms
 
 ## 👨‍💻 Autor
 **Kayque Avelar**  
-💼 Suporte Ábax | 🚀 Desenvolvedor Java & Front-end  
-📧 kayqueavelar@exemplo.com  
+💼 Desenvolvedor Java & Front-end  
+📧 kayque9868@gmail.com 
 
 ---
 
