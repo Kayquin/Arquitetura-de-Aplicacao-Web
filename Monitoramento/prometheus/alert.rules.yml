@@ -1,0 +1,29 @@
+﻿groups:
+  - name: pedido-alerts
+    rules:
+      - alert: HighLatencyPedidos
+        expr: histogram_quantile(0.9, sum(rate(pedidos_processamento_timer_bucket[1m])) by (le)) > 1
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Latência alta no endpoint /pedidos"
+          description: "P90 > 1s para pedidos nos últimos 1m"
+
+      - alert: HighErrorRate
+        expr: rate(http_server_requests_seconds_count{status=~"5.."}[5m]) / rate(http_server_requests_seconds_count[5m]) > 0.05
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Taxa de erro 5xx alta"
+          description: "Mais de 5% de erros 5xx nos últimos 5 minutos"
+
+      - alert: DropInPedidos
+        expr: increase(pedidos_criados_count[5m]) < 1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Queda na criação de pedidos"
+          description: "Queda abrupta ou ausência de pedidos nos últimos 5 minutos"
