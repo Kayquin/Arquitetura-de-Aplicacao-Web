@@ -1,4 +1,4 @@
-﻿# Sistema Acadêmico - Backend (Spring Boot 3)
+# Sistema Acadêmico - Backend (Spring Boot 3)
 
 Este repositório contém o backend do Sistema Acadêmico, implementado com Spring Boot 3.
 
@@ -14,7 +14,7 @@ Como executar localmente
 1. Abra um terminal e vá para a pasta `backend`:
 
 ```powershell
-cd C:\Users\ivank\Documents\Av2\backend
+cd C:\Users\...\...\Av2\backend
 mvn spring-boot:run
 ```
 
@@ -42,7 +42,7 @@ Monitoramento com Prometheus e Grafana (local)
 2. Inicie Prometheus e Grafana com Docker Compose:
 
 ```powershell
-cd C:\Users\ivank\Documents\Av2\backend
+cd C:\Users\...\...\Av2\backend
 docker compose up -d
 ```
 
