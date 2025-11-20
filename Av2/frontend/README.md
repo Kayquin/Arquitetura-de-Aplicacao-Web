@@ -1,4 +1,4 @@
-﻿# Sistema Acadêmico - Frontend (placeholder)
+# Sistema Acadêmico - Frontend (placeholder)
 
 Este diretório deve conter a aplicação frontend que consome a API do backend.
 
@@ -28,7 +28,7 @@ Tecnologias sugeridas
 Como rodar localmente (exemplo com React + Vite)
 
 ```powershell
-cd C:\Users\ivank\Documents\Av2\frontend
+cd C:\Users\...\...\Av2\frontend
 npm install
 npm run dev
 ```
